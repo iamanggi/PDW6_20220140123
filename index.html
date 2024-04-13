@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arbutus&family=Bungee&family=Pacifico&family=Rubik+Mono+One&family=Sriracha&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Masdddho</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Videos">Videos</a></li>
+                <li><a href="#Music">Music</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Konten Overview -->
+    <div id="Home" class="home">
+        <div class="gambar">
+            <img src="assets/images/profile-removebg-preview.png" alt="profile">
+        </div>
+        <div class="deskripsi">
+            <h2>Mas<span>dddho</span></h2>
+            <p>Ahmad Ridho atau dikenal sebagai <span>Masdddho</span> adalah penyanyi Indonesia yang sukses dikenal dengan lagu KISINAN. Sejak 2022 sudah aktif bernyanyi dan menulis karya-karyanya. Masdddho yang mulai merilis lagu TAJIN di tahun 2022 berhasil menarik perhatian pecinta musik. Tahun 2023, Masdddho sudah banyak berkolaborasi dengan musisi Indonesia lainnya.</p>
+        </div>
+        <div class="home-sci">
+            <a href="https://www.instagram.com/masdddho/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://youtube.com/@ahmadridhonugroho?si=Z3PqamAqspGEYPUx"><i class='bx bxl-youtube' ></i></a>
+            <a href="https://open.spotify.com/artist/4GgexJxJZfH4pxYRIF4nBh?si=VU3BwxJDTmSqmrfWL3on0Q"><i class='bx bxl-spotify' ></i></a>
+            <a href="https://www.tiktok.com/@masdddho"><i class='bx bxl-tiktok' ></i></a>
+        </div>
+    </div>
+    <div id="Videos" class="sliders-videos">
+        <div class="container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class="icon">1</div>
+                    <div class="description">
+                        <h4>Dumes</h4>
+                        <video src="assets/video/video dumes.mp4" class="slide-video" controls></video>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2" >
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="icon">2</div>
+                    <div class="description">
+                        <h4>Kisinan 2</h4>
+                        <video src="assets/video/video Kisinan 2.mp4" class="slide-video" controls></video>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3" >
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="icon">3</div>
+                    <div class="description">
+                        <h4>Samar</h4>
+                        <video src="assets/video/video samar.mp4" class="slide-video" controls></video>
+                    </div>
+                </div>
+            </label>
+            </div>
+    </div>
+<section>
+    <div id="Music" class="wrapper">
+        <div class="top-bar">
+            <i class="material-icons">expand_more</i>
+            <span>Now Playing</span>
+            <i class="material-icons">more_horiz</i>
+        </div>
+        <div class="img-area">
+            <img src="" alt="">
+        </div>
+        <div class="song-details">
+            <p class="nama">Masdddho - Dumes</p>
+            <p class="artis">Masdddho</p>
+        </div>
+        <div class="progress-area">
+            <div class="progress-bar"></div>
+            <div class="timer">
+                <span class="current">0:00</span>
+                <span class="duration"></span>
+            </div>
+            <audio id="main-audio" src=""></audio>
+            </div>
+            <div class="controls">
+                <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                <i id="prev" class="material-icons">skip_previous</i>
+                <div class="play-pause">
+                    <i class="material-icons">play_arrow</i>
+                </div>
+                <i id="next" class="material-icons">skip_next</i>
+                <i id="more-music" class="material-icons">queue_music</i>
+            </div>
+        <div class="music-list">
+            <div class="atas">
+                <div class="baris">
+                    <i class="material-icons">queue_music</i>
+                    <span>Musik List</span>
+                </div>
+                <i id="close" class="material-icons">close</i>
+            </div>
+        <ul>
+            <li>
+                <div class="baris">
+                    <span>Masdddho - Kisinan 2</span>
+                    <p>Masdddho</p>
+                </div>
+                <span class="audio-durasi">4:32</span>
+            </li>
+            <li>
+                <div class="baris">
+                    <span>Masdddho - Kisinan</span>
+                    <p>Masdddho</p>
+                </div>
+                <span class="audio-durasi">4:21</span>
+            </li>
+            <li>
+                <div class="baris">
+                    <span>Masdddho - Nemen</span>
+                    <p>Masdddho</p>
+                </div>
+                <span class="audio-durasi">5:22</span>
+            </li>
+            <li>
+                <div class="baris">
+                    <span>Masdddho - Nemu</span>
+                    <p>Masdddho</p>
+                </div>
+                <span class="audio-durasi">4:53</span>
+            </li>
+            <li>
+                <div class="baris">
+                    <span>Masdddho - Samar</span>
+                    <p>Masdddho</p>
+                </div>
+                <span class="audio-durasi">5:53</span>
+            </li>
+            <li>
+                <div class="baris">
+                    <span>Masdddho - Tenanan</span>
+                    <p>Masdddho</p>
+                </div>
+                <span class="audio-durasi">4:10</span>
+            </li>
+        </ul>
+        </div>
+        </div>
+    </div>
+</section>
+    <script src="script/main.js"></script>
+</body>
+</html>

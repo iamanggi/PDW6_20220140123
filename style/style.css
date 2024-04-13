@@ -1,0 +1,554 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f89898;
+    
+}
+
+body::-webkit-scrollbar{
+    width: 0px;
+}
+.home {
+    display: flex; /* Mengatur tampilan menjadi flex */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    margin-top: 200px; /* Margin atas */
+    margin-left: 15%; /* Batasan kiri */
+    margin-right: 15%; /* Batasan kanan */
+}
+
+.home .deskripsi {
+    background-color: rgb(255, 255, 255); /* Warna latar belakang dengan transparansi */
+    border-radius: 10px; /* Sudut sudut elemen */
+    padding: 30px; /* Padding untuk memberi ruang di dalam elemen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.229); /* Efek kaca */
+}
+
+.home .gambar img {
+    width: 350px; /* Mengatur lebar gambar */
+    height: auto; /* Mengatur tinggi gambar agar tetap proporsional */
+    border-radius: 5%; /* Membuat gambar menjadi bundar */
+}
+
+.home h2 {
+    font-weight: bold; /* Ketebalan font judul */
+    font-size: 45px; /* Ukuran font judul */
+    color: rgb(0, 0, 0); /* Warna font judul */
+    font-family: 'Cooper Black'; /* Jenis font judul */
+}
+
+.home h2 span {
+    font-family: 'Forte'; /* Jenis font untuk span */
+    color: rgb(230, 126, 187); /* Warna font untuk span */
+    font-size: 35px; /* Ukuran font untuk span */
+}
+
+.home p {
+    margin-top: 20px; /* Margin atas untuk paragraf */
+    font-size: 15px; /* Ukuran font deskripsi */
+    font-family: 'Trebuchet MS'; /* Jenis font deskripsi */
+}
+
+.home p span{
+    color: rgb(236, 66, 123); /* Warna font untuk span dalam paragraf */
+    font-family: "Pacifico", cursive; /* Jenis font untuk span dalam paragraf */
+}
+
+.menu ul {
+    list-style-type: none; /* Hilangkan bullet pada daftar */
+    padding: 0; /* Hilangkan padding */
+    margin: 0; /* Hilangkan margin */
+    position: absolute; /* Posisi absolut untuk menu */
+    top: 20px; /* Jarak dari atas */
+    right: 100px; /* Jarak dari kanan */
+    font-size: 20px; /* Ukuran font menu */
+    font-weight: bold; /* Ketebalan font menu */
+}
+
+.menu ul li {
+    display: inline-block; /* Tampilkan sebagai inline block */
+    margin-right: 25px; /* Margin kanan antar item */
+    color: rgb(0, 0, 0); /* Warna font untuk item daftar */
+    cursor: pointer; /* Pointer ketika dihover */
+    position: relative; /* Relatif untuk posisi anak */
+}
+
+.menu ul li::before {
+    content: ''; /* Isi konten */
+    position: absolute; /* Posisi absolut */
+    bottom: -5px; /* Mengubah posisi bottom untuk responsivitas */
+    left: 0; /* Posisi dari kiri */
+    width: 0; /* Lebar awal */
+    height: 3px; /* Tinggi garis */
+    background-image: linear-gradient(to right, rgb(80, 84, 174), rgb(255, 0, 0)); /* Gradient warna latar */
+    transition: width 0.3s ease; /* Transisi untuk efek perubahan lebar */
+    border-radius: 5px; /* Radius sudut */
+}
+
+header {
+    position: fixed; /* Posisi tetap */
+    width: 100%; /* Lebar penuh */
+    z-index: 2; /* Indeks tumpukan */
+    top: 0; /* Jarak dari atas */
+}
+
+.menu ul li:nth-child(1):hover::before {
+    width: 100%; /* Perluas lebar garis saat dihover */
+}
+
+.menu ul li:nth-child(2):hover::before {
+    width: 100%; /* Perluas lebar garis saat dihover */
+}
+
+.menu ul li:nth-child(3):hover::before {
+    width: 100%; /* Perluas lebar garis saat dihover */
+}
+
+.menu ul li:nth-child(1):hover + li::before {
+    width: 0; /* Kembalikan lebar garis ke 0 saat item pertama dihover */ 
+}
+
+.menu ul li:nth-child(2):hover + li::before {
+    width: 0; /* Kembalikan lebar garis ke 0 saat item pertama dihover */
+}
+
+.menu ul li:nth-child(3):hover + li::before {
+    width: 0; /* Kembalikan lebar garis ke 0 saat item pertama dihover */ 
+}
+
+.menu ul li a {
+    text-decoration: none; /* Hilangkan garis bawah pada tautan */
+    color: inherit; /* Warisi warna dari elemen induk */
+}
+
+.home-sci {
+    position: absolute; /* Posisi absolut untuk positioning yang tepat */
+    bottom: 10%; /* Menggunakan persentase untuk bottom agar lebih responsif */
+    left: 50%; /* Pusatkan elemen ke tengah horizontal */
+    transform: translateX(-50%); /* Pusatkan home-sci secara horizontal */
+    width: 80%; /* Menggunakan persentase untuk width agar lebih responsif */
+    max-width: 200px; /* Batasan maksimal lebar */
+    display: flex; /* Mengatur tampilan menjadi flex */
+    justify-content: space-between; /* Menyusun item dengan ruang antara mereka */
+    flex-wrap: wrap; /* Agar ikon-ikon bisa wrap ke baris baru jika lebar layar terlalu sempit */
+}
+
+.home-sci a {
+    position: relative; /* Posisi relatif untuk positioning yang tepat */
+    display: inline-flex; /* Tampilkan sebagai inline flex */
+    width: 40px; /* Lebar ikon */
+    height: 40px; /* Tinggi ikon */
+    background: transparent; /* Latar belakang transparan */
+    border: 2px solid #ffffff; /* Garis pinggiran dengan warna putih */
+    border-radius: 50%; /* Bentuk bulat */
+    font-size: 30px; /* Ukuran font ikon */
+    color: #ffffff; /* Warna font putih */
+    text-decoration: none; /* Hilangkan dekorasi tautan */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    overflow: hidden; /* Sembunyikan konten yang berlebih */
+    z-index: 1; /* Indeks tumpukan */
+    transition: .5s; /* Transisi untuk efek perubahan */
+    margin-bottom: 20px; /* Mengurangi margin bottom untuk responsivitas */
+}
+
+.home-sci a:hover {
+    color: #c12ca0; /* Ganti warna font saat dihover */
+}
+
+.home-sci a::before {
+    content: ''; /* Isi konten pseudo-element */
+    position: absolute; /* Posisi absolut */
+    top: 0; /* Atur posisi dari atas */
+    left: 0; /* Atur posisi dari kiri */
+    width: 0; /* Lebar awal */
+    height: 100%; /* Tinggi sesuai dengan konten */
+    transition: .3s; /* Durasi transisi */
+    border-radius: 50%; /* Bentuk bulat */
+    background: #ffffff; /* Warna latar belakang putih */
+    transition: .5s; /* Durasi transisi */
+    z-index: -1; /* Indeks tumpukan untuk berada di bawah konten */
+}
+
+/* Media queries untuk responsivitas */
+@media (max-width: 768px) {
+    .home-sci {
+        bottom: 5%; /* Mengurangi jarak bottom untuk layar yang lebih sempit */
+        left: 80%; /* Menggeser home-sci ke kanan untuk layar setengah */
+        transform: translateX(-80%); /* Sesuaikan transform untuk menggeser home-sci ke kanan */
+    }
+
+    .home-sci a {
+        width: 35px; /* Mengurangi ukuran ikon untuk layar yang lebih sempit */
+        height: 35px; /* Mengurangi ukuran ikon untuk layar yang lebih sempit */
+        font-size: 26px; /* Mengurangi ukuran font untuk layar yang lebih sempit */
+    }
+}
+
+/* Media queries untuk layar penuh */
+@media (min-width: 769px) {
+    .home-sci {
+        bottom: 20%; /* Menggeser home-sci lebih ke atas */
+        left: 38%; /* Menggeser home-sci lebih ke kiri */
+        transform: translate(0, -50%); /* Sesuaikan transform untuk menggeser home-sci lebih ke atas dan kiri */
+    }
+}
+
+.sliders-videos {
+    width: 100%; /* Lebar penuh */
+    height: 100vh; /* Tinggi sesuai dengan tinggi viewport */
+    display: flex; /* Mengatur tampilan menjadi flex */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    margin-top: 200px; /* Margin atas */
+}
+
+.container {
+    height: 400px; /* Tinggi kontainer */
+    display: flex; /* Mengatur tampilan menjadi flex */
+    flex-wrap: nowrap; /* Hindari wrapping konten */
+    justify-content: start; /* Menyusun item dari awal kontainer */
+}
+
+.card {
+    width: 80px; /* Lebar elemen card */
+    border-radius: .75rem; /* Bentuk sudut card */
+    background-size: cover; /* Ukuran latar belakang mengisi area card */
+    cursor: pointer; /* Kursor berubah menjadi pointer saat dihover */
+    overflow: hidden; /* Sembunyikan konten yang berlebih */
+    border-radius: 2rem; /* Bentuk bulat pada sudut */
+    margin: 0 10px; /* Margin kiri dan kanan */
+    display: flex; /* Mengatur tampilan menjadi flex */
+    align-items: flex-end; /* Pusatkan konten secara vertikal ke bawah */
+    transition: .6s cubic-bezier(.28,-0.03,0,.99); /* Transisi untuk efek perubahan */
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8); /* Bayangan */
+    padding: 5px; /* Ruang internal */
+    background-color: rgb(255, 255, 255); /* Warna latar belakang */
+}
+
+.card  .row {
+    color: white; /* Warna font */
+    display: flex; /* Mengatur tampilan menjadi flex */
+    flex-wrap: nowrap; /* Hindari wrapping konten */
+    align-items: flex-end; /* Pusatkan konten secara vertikal ke bawah */
+}
+
+.card .row .icon {
+    background: #223; /* Warna latar belakang ikon */
+    color: rgb(255, 255, 255); /* Warna font ikon */
+    border-radius: 50%; /* Bentuk bulat ikon */
+    width: 50px; /* Lebar ikon */
+    height: 50px; /* Tinggi ikon */
+    display: flex; /* Mengatur tampilan menjadi flex */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    margin: 10px; /* Margin untuk jarak dari tepi */
+}
+
+.card .row .description {
+    position: relative; /* Posisi relatif */
+    display: flex; /* Mengatur tampilan menjadi flex */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    flex-direction: column; /* Atur tata letak konten menjadi kolom */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    overflow: hidden; /* Sembunyikan konten yang berlebih */
+    height: 100%; /* Tinggi sesuai dengan konten */
+    width: 100%; /* Lebar sesuai dengan konten */
+    opacity: 0; /* Opasitas awal */
+    transform: translateY(30px); /* Geser konten ke bawah */
+    transition-delay: .3s; /* Delay untuk transisi */
+    transition: all .3s ease; /* Transisi untuk semua perubahan */
+    padding-bottom: 20px; /* Ruang bawah */
+}
+
+.card .row .description video {
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    object-fit: cover; /* Objek video mengisi kontainer */
+}
+
+.description h4 {
+    text-transform: uppercase; /* Konversi teks ke huruf besar */
+    color: rgb(0, 0, 0); /* Warna font */
+    text-align: center; /* Pusatkan teks */
+    letter-spacing: 2px; /* Jarak antar huruf */
+    font-family: "Rubik Mono One", monospace; /* Jenis font */
+    font-size: 50px; /* Ukuran font */
+    background: linear-gradient(45deg, rgb(255, 104, 190), rgb(80, 84, 174)); /* Gradien latar belakang */
+    background-clip: text; /* Gradien hanya di clip pada teks */
+    -webkit-background-clip: text; /* Mendukung browser berbasis WebKit */
+    -webkit-text-fill-color: transparent; /* Warna teks transparan untuk mendukung gradien */
+}
+
+input {
+    display: none; /* Sembunyikan input */
+}
+
+input:checked + label {
+    width: 600px; /* Lebar label saat input dichecked */
+}
+
+input:checked + label .description {
+    opacity: 1 !important; /* Opasitas maksimum */
+    transform: translateY(0) !important; /* Reset transformasi translasi */
+}
+
+.slide-video {
+    display: flex; /* Mengatur tampilan menjadi flex */
+    align-items: center; /* Pusatkan konten secara vertikal */
+}
+
+section {
+    display: flex; /* Mengatur tampilan menjadi flex */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    min-height: 100vh; /* Tinggi minimum 100% dari viewport height */
+}
+
+.wrapper {
+    width: 380px; /* Lebar wrapper */
+    overflow: hidden; /* Sembunyikan konten yang berlebih */
+    background: #ffffff; /* Warna latar belakang */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Efek bayangan */
+    border-radius: 15px; /* Sudut bulat */
+    padding: 25px 30px; /* Ruang internal */
+    height: 600px; /* Tinggi wrapper */
+    position: relative; /* Posisi relatif */
+}
+
+.wrapper i {
+    cursor: pointer; /* Kursor menjadi pointer saat dihover */
+}
+
+.top-bar,  
+.progress-area .timer, 
+.controls, 
+.music-list .atas, 
+.music-list li {
+    display: flex; /* Mengatur tampilan menjadi flex */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    justify-content: space-between; /* Sebar konten secara horizontal */
+}
+
+.top-bar i {
+    font-size: 30px; /* Ukuran font untuk ikon */
+    color: #515C6F; /* Warna teks untuk ikon */
+}
+
+.top-bar span {
+    font-size: 18px; /* Ukuran font untuk teks */
+    color: #515C6F; /* Warna teks */
+}
+
+.img-area {
+    height: 256px; /* Tinggi area gambar */
+    width: 100%; /* Lebar maksimum */
+    margin-top: 25px; /* Margin atas */
+    border-radius: 15px; /* Sudut bulat */
+    overflow: hidden; /* Sembunyikan konten yang berlebih */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Efek bayangan */
+}
+
+.img-area img {
+    height: 100%; /* Tinggi gambar */
+    width: 100%; /* Lebar gambar */
+    object-fit: cover; /* Sesuaikan gambar ke area tanpa merubah aspek rasio */
+}
+
+.song-details {
+    text-align: center; /* Pusatkan teks secara horizontal */
+    margin: 30px 0; /* Margin atas dan bawah */
+    color: #515C6F; /* Warna teks */
+}
+
+.song-details .nama {
+    font-size: 21px; /* Ukuran font untuk nama lagu */
+}
+
+.song-details .artis {
+    opacity: 0.9; /* Opasitas elemen */
+    font-size: 18px; /* Ukuran font untuk nama artis */
+}
+
+.progress-area {
+    height: 6px; /* Tinggi area progress */
+    width: 100%; /* Lebar maksimum */
+    background: #f0f0f0; /* Warna latar belakang */
+    border-radius: 50px; /* Sudut bulat */
+    cursor: pointer; /* Kursor berubah menjadi pointer saat diarahkan */
+}
+
+.progress-area .progress-bar {
+    height: inherit; /* Tinggi sesuai dengan parent */
+    width: 0%; /* Lebar awal 0% */
+    position: relative; /* Posisi relatif */
+    border-radius: inherit; /* Gunakan border-radius dari parent */
+    background: linear-gradient(90deg, rgb(255, 104, 190) 0%, rgb(80, 84, 174) 100%); /* Gradien untuk progress */
+}
+
+.progress-bar::before {
+    content: ""; /* Menambahkan konten kosong */
+    position: absolute; /* Posisi absolut terhadap parent */
+    height: 12px; /* Tinggi pseudo-element */
+    width: 12px; /* Lebar pseudo-element */
+    background: black; /* Warna latar belakang */
+    border-radius: inherit; /* Gunakan border-radius dari parent */
+    top: 50%; /* Posisi atas */
+    right: -5px; /* Posisi kanan */
+    transform: translateY(-50%); /* Pusatkan vertikal */
+    background: inherit; /* Warisan latar belakang */
+    opacity: 0; /* Opasitas awal */
+    transition: opacity 0.2s ease; /* Transisi untuk opacity */
+}
+
+.progress-area:hover .progress-bar::before {
+    opacity: 1; /* Ubah opacity menjadi 1 saat dihover */
+}
+
+.progress-area .timer {
+    margin-top: 2px; /* Margin atas */
+}
+
+.timer span {
+    font-size: 13px; /* Ukuran font */
+    color: #515C6F; /* Warna teks */
+}
+
+.controls {
+    margin: 40px 0 5px 0; /* Margin atas, bawah, kiri, kanan */
+}
+
+.controls i {
+    font-size: 28px; /* Ukuran font */
+    user-select: none; /* Larang pemilihan teks */
+    background: linear-gradient( rgb(255, 104, 190) 0%, rgb(80, 84, 174) 100% ); /* Gradien untuk teks */
+    background-clip: text; /* Aplikasikan gradien ke teks */
+    -webkit-background-clip: text; /* Untuk mendukung browser berbasis WebKit */
+    -webkit-text-fill-color: transparent; /* Hilangkan warna teks */
+}
+
+.controls i:nth-child(2), 
+.controls i:nth-child(4) {
+    font-size: 43px; /* Ukuran font */
+}
+
+.controls #prev {
+    margin-right: -13px; /* Margin kanan negatif */
+}
+
+.controls #next {
+    margin-left: -13px; /* Margin kiri negatif */
+}
+
+.controls .play-pause {
+    height: 54px; /* Tinggi */
+    width: 54px; /* Lebar */
+    background: linear-gradient(#ffffff 0%, #cecaca 100%); /* Gradien latar belakang */
+    box-shadow: 0px 0px 5px rgb(255, 104, 190); /* Bayangan */
+    border-radius: 50%; /* Border-radius 50% untuk bentuk lingkaran */
+    display: flex; /* Tampilan flex */
+    align-items: center; /* Pusatkan vertikal */
+    justify-content: center; /* Pusatkan horizontal */
+}
+
+.play-pause::before {
+    height: 43px; /* Tinggi pseudo-element */
+    width: 43px; /* Lebar pseudo-element */
+    content: ""; /* Konten kosong */
+    border-radius: inherit; /* Gunakan border-radius dari parent */
+    position: absolute; /* Posisi absolut */
+    background: linear-gradient(rgb(255, 104, 190) 0%, rgb(80, 84, 174) 100%); /* Gradien latar belakang */
+}
+
+.play-pause i {
+    height: 43px; /* Tinggi */
+    width: 43px; /* Lebar */
+    line-height: 43px; /* Line-height */
+    text-align: center; /* Pusatkan teks */
+    border-radius: inherit; /* Gunakan border-radius dari parent */
+    background-clip: text; /* Aplikasikan gradien ke teks */
+    background: inherit; /* Warisan latar belakang */
+    position: relative; /* Posisi relatif */
+    -webkit-background-clip: text; /* Untuk mendukung browser berbasis WebKit */
+    -webkit-text-fill-color: transparent; /* Hilangkan warna teks */
+}
+
+.music-list {
+    position: absolute; /* Posisi absolut */
+    left: 0; /* Atur ke kiri */
+    bottom: -55%; /* Atur ke bawah dengan jarak -55% dari parent */
+    width: 100%; /* Lebar 100% */
+    opacity: 0; /* Opasitas 0 */
+    pointer-events: none; /* Nonaktifkan event pointer */
+    padding: 10px 20px; /* Padding */
+    border-radius: 15px; /* Border-radius */
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    background: #ffffff; /* Latar belakang */
+}
+
+.music-list.show {
+    bottom: 0%; /* Atur ke bawah dengan jarak 0% dari parent */
+    opacity: 1; /* Opasitas 1 */
+    pointer-events: auto; /* Aktifkan event pointer */
+    transition: all 0.14s ease-out; /* Transisi */
+}
+
+.music-list .atas .baris {
+    display: flex; /* Tampilan flex */
+    align-items: center; /* Pusatkan vertikal */
+    font-size: 19px; /* Ukuran font */
+    color: #515C6F; /* Warna font */
+}
+
+.music-list .baris i {
+    cursor: default; /* Kursor default */
+}
+
+.atas .baris span {
+    margin-left: 5px; /* Margin kiri 5px */
+}
+
+.atas #close {
+    font-size: 22px; /* Ukuran font */
+    color: #515C6F; /* Warna font */
+}
+
+.music-list ul {
+    margin: 10px 0; /* Margin atas dan bawah */
+    max-height: 200px; /* Ketinggian maksimal */
+    overflow-y: auto; /* Overflow vertikal dengan scroll */
+}
+
+.music-list ul::-webkit-scrollbar {
+    width: 0px; /* Lebar scrollbar 0px */
+}
+
+.music-list ul li {
+    cursor: pointer; /* Kursor pointer */
+    list-style: none; /* Tidak menampilkan bullet list */
+    padding-bottom: 10px; /* Padding bawah */
+    margin-bottom: 5px; /* Margin bawah */
+    color: #515C6F; /* Warna font */
+    border-bottom: 1px solid #e5e5e5; /* Garis bawah */
+}
+
+.music-list ul li:last-child {
+    border-bottom: 0px; /* Hapus garis bawah untuk elemen terakhir */
+}
+
+.music-list ul li .baris span {
+    font-size: 17px; /* Ukuran font */
+}
+
+ul li .baris p {
+    opacity: 0.9; /* Opasitas 0.9 */
+}
+
+ul li .audio-durasi {
+    font-size: 16px; /* Ukuran font */
+}
